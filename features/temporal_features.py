@@ -52,6 +52,10 @@ class TemporalFeatureEngineer:
             )["review_id"]
             .transform("count")
         )
+        
+        self.df["same_day_spam"] = (
+            self.df["reviews_per_day"] > 10
+        ).astype(int)
 
         mean_reviews = (
             self.df["reviews_per_day"]
@@ -62,6 +66,7 @@ class TemporalFeatureEngineer:
             self.df["reviews_per_day"]
             / mean_reviews
         )
+    
 
         return self.df
 

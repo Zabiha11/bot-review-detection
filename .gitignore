@@ -6,3 +6,8 @@ venv/
 ENV/
 .env
 .DS_Store
+virenv1/
+.ipynb_checkpoints/
+*.pyc
+artifacts/
+data/raw/

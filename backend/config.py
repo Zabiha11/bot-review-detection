@@ -1,0 +1,1 @@
+MODEL_PATH = "artifacts/models/xgboost_model.pkl"
